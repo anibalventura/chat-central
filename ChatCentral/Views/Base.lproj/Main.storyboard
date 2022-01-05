@@ -390,8 +390,11 @@
             <point key="canvasLocation" x="-42.028985507246382" y="120.53571428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="E4G-Xy-Gyh"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="qgf-Dj-MTm"/>
+        <segue reference="KhW-qe-Ks5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="TextFieldBackground" width="298" height="93"/>

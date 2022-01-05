@@ -17,6 +17,7 @@
 		C5D866AE2784F69F00793041 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D866AD2784F69F00793041 /* RegisterViewController.swift */; };
 		C5D866B02784F6CA00793041 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D866AF2784F6CA00793041 /* LoginViewController.swift */; };
 		C5D866B22784F6FF00793041 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D866B12784F6FF00793041 /* ChatViewController.swift */; };
+		C5D866B42785DCD000793041 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5D866B32785DCD000793041 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C5D866AD2784F69F00793041 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C5D866AF2784F6CA00793041 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C5D866B12784F6FF00793041 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C5D866B32785DCD000793041 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,6 @@
 				B36567E928E17A633841D6FD /* Pods-ChatCentral.debug.xcconfig */,
 				0E91E9859F19FB222358F2F7 /* Pods-ChatCentral.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,6 +94,7 @@
 				C5D866AA2784F49D00793041 /* Controllers */,
 				C5D8669C2784F44B00793041 /* Assets.xcassets */,
 				C5D866A12784F44B00793041 /* Info.plist */,
+				C5D866B32785DCD000793041 /* GoogleService-Info.plist */,
 			);
 			path = ChatCentral;
 			sourceTree = "<group>";
@@ -194,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D866A02784F44B00793041 /* LaunchScreen.storyboard in Resources */,
+				C5D866B42785DCD000793041 /* GoogleService-Info.plist in Resources */,
 				C5D8669D2784F44B00793041 /* Assets.xcassets in Resources */,
 				C5D8669B2784F44900793041 /* Main.storyboard in Resources */,
 			);
