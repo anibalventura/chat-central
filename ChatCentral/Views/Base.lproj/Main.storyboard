@@ -322,8 +322,7 @@
                                         <color key="tintColor" name="Navy"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="sendButtonPressed:" destination="upi-qu-95v" eventType="touchUpInside" id="lTV-hU-vbX"/>
-                                            <action selector="sendPressed:" destination="upi-qu-95v" eventType="touchUpInside" id="p0z-nN-SoD"/>
+                                            <action selector="sendButtonPressed:" destination="upi-qu-95v" eventType="touchUpInside" id="9eG-WX-mBc"/>
                                         </connections>
                                     </button>
                                 </subviews>
