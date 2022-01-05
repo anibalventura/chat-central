@@ -6,8 +6,8 @@ target 'ChatCentral' do
 
   # Pods for ChatCentral
   pod 'CLTypingLabel'
-  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift'
   
 end

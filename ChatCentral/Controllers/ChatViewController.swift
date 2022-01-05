@@ -14,7 +14,6 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     
     private let db = Firestore.firestore()
-    
     private var messages: [Message] = []
     
     override func viewDidLoad() {
