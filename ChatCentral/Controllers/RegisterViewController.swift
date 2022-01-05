@@ -6,15 +6,30 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        createUser()
     }
     
-    @IBAction func registerButtonPressed(_ sender: UIButton) {
+    private func createUser() {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                }
+            }
+        } else {
+            Utils.showAlert(self, title: "Complete fields!", message: "Must complete all fields to continue.")
+        }
     }
 }
