@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
-    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var appNameLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Trigger typing animation.
+        appNameLabel.text = "💬 Chat Central"
     }
 }

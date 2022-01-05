@@ -34,7 +34,7 @@
                                     <segue destination="BoO-wp-KFA" kind="show" id="WWv-bJ-kfs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💬 Chat Central" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-Xy-Gyh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💬 Chat Central" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-Xy-Gyh" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="0.0" y="418" width="414" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TRh-h4-V17"/>
@@ -82,7 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="G4X-9g-jGA"/>
                     <connections>
-                        <outlet property="appNameLabel" destination="E4G-Xy-Gyh" id="GRS-m8-34l"/>
+                        <outlet property="appNameLabel" destination="E4G-Xy-Gyh" id="w1U-NO-5Pg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1g-iN-8D1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
