@@ -63,6 +63,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="Purple"/>
             <connections>
                 <outlet property="leftAvatarImage" destination="kPM-cD-MEl" id="1dw-RN-kEJ"/>
                 <outlet property="messageBubble" destination="Cws-oA-B5g" id="knq-TM-UUn"/>
@@ -80,6 +81,9 @@
         </namedColor>
         <namedColor name="Orange">
             <color red="0.98799997568130493" green="0.60000002384185791" blue="0.48600000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.85500001907348633" green="0.86699998378753662" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

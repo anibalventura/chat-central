@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="WIQ-j4-vrS" customClass="WelcomeViewController" customModule="ChatCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g90-PX-3Eh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPE-lJ-3sY">
-                                <rect key="frame" x="30" y="801" width="354" height="61"/>
+                                <rect key="frame" x="30" y="713" width="354" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="ejT-fM-7Ez"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💬 Chat Central" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-Xy-Gyh" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="0.0" y="418" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="374" width="414" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TRh-h4-V17"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rk-xw-2dr">
-                                <rect key="frame" x="30" y="745" width="354" height="48"/>
+                                <rect key="frame" x="30" y="657" width="354" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="DIK-Bt-22e"/>
                                 </constraints>
@@ -94,11 +94,11 @@
             <objects>
                 <viewController id="cgl-qU-Van" customClass="RegisterViewController" customModule="ChatCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fy-0M-FMC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGa-uU-zT0" userLabel="Email View">
-                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ier-EB-JHy">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -107,7 +107,7 @@
                                         <rect key="frame" x="48" y="50" width="318" height="45"/>
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -123,7 +123,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjI-Zx-A5G" userLabel="Password View">
-                                <rect key="frame" x="0.0" y="165" width="414" height="115"/>
+                                <rect key="frame" x="0.0" y="77" width="414" height="115"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="D2X-bi-MG5">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -148,7 +148,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqw-8n-35B" userLabel="Register Button">
-                                <rect key="frame" x="30" y="310" width="354" height="50"/>
+                                <rect key="frame" x="30" y="222" width="354" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" name="Navy"/>
@@ -193,11 +193,11 @@
             <objects>
                 <viewController id="BoO-wp-KFA" customClass="LoginViewController" customModule="ChatCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B9v-Df-wkS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3y-lC-kAO" userLabel="Email View">
-                                <rect key="frame" x="0.0" y="88" width="414" height="177"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="MnC-iv-gqd">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -206,7 +206,7 @@
                                         <rect key="frame" x="49" y="51" width="317" height="45"/>
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -222,7 +222,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-Rd-dyk" userLabel="Password View">
-                                <rect key="frame" x="0.0" y="165" width="414" height="113"/>
+                                <rect key="frame" x="0.0" y="77" width="414" height="113"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="sB5-J6-dtJ">
                                         <rect key="frame" x="0.0" y="20" width="414" height="137"/>
@@ -247,7 +247,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noo-bc-AY2" userLabel="Log In Button">
-                                <rect key="frame" x="30" y="308" width="354" height="50"/>
+                                <rect key="frame" x="30" y="220" width="354" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" name="Navy"/>
@@ -292,15 +292,15 @@
             <objects>
                 <viewController id="upi-qu-95v" customClass="ChatViewController" customModule="ChatCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YmL-1E-FFy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DaX-X5-orQ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="708"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+                                <color key="backgroundColor" name="Purple"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAX-TW-f5k">
-                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="708" width="414" height="100"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-yL-d6o">
                                         <rect key="frame" x="20" y="20" width="314" height="40"/>
@@ -370,10 +370,22 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uca-lX-wMe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m0o-5Z-J26">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="m0o-5Z-J26">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Orange"/>
                         <color key="tintColor" name="Navy"/>
+                        <color key="barTintColor" name="Orange"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
+                            <color key="textColor" name="Navy"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" name="Orange"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" name="Orange"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -386,9 +398,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="E4G-Xy-Gyh">
-            <size key="intrinsicContentSize" width="342.5" height="54"/>
-        </designable>
+        <designable name="E4G-Xy-Gyh"/>
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="KhW-qe-Ks5"/>
