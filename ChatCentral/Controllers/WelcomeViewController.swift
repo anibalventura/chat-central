@@ -15,6 +15,6 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Trigger typing animation.
-        appNameLabel.text = "💬 Chat Central"
+        appNameLabel.text = K.appName
     }
 }
