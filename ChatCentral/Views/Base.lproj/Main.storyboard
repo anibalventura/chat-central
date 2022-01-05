@@ -360,7 +360,13 @@
                             <constraint firstItem="DaX-X5-orQ" firstAttribute="top" secondItem="sHg-zt-6tw" secondAttribute="top" id="xI0-k2-mVc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IzY-1F-td9"/>
+                    <navigationItem key="navigationItem" id="IzY-1F-td9">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="h5O-dh-Pvv">
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="upi-qu-95v" id="AuQ-Ri-ejz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="DCW-yL-d6o" id="z37-27-PpO"/>
                         <outlet property="tableView" destination="DaX-X5-orQ" id="6Hl-WU-9X2"/>
