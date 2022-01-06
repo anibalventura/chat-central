@@ -20,7 +20,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sR-JY-XJ6">
                         <rect key="frame" x="10" y="6" width="421" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                        <color key="textColor" name="Navy"/>
+                        <color key="textColor" name="Blue"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zhl-Sn-ZpF">
@@ -86,6 +86,9 @@
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
         <image name="YouAvatar" width="36" height="36"/>
+        <namedColor name="Blue">
+            <color red="0.22400000691413879" green="0.4309999942779541" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Navy">
             <color red="0.18000000715255737" green="0.29800000786781311" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
