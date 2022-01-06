@@ -106,11 +106,14 @@ extension ChatViewController: UITableViewDataSource {
         let message = self.messages[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: K.ChatCell.cellIdentifier, for: indexPath) as! MessageCell
         cell.messageLabel.text = message.body
+        cell.senderLabel.text = message.sender
         
         // Message from the current user.
         if message.sender == Firebase.auth.currentUser?.email {
             cell.leftAvatarImage.isHidden = true
             cell.rightAvatarImage.isHidden = false
+            cell.senderLabel.textAlignment = .right
+            cell.messageLabel.textAlignment = .right
             cell.messageBubble.backgroundColor = UIColor(named: K.Colors.navy)
             cell.messageLabel.textColor = UIColor(named: K.Colors.orange)
         }
@@ -118,6 +121,8 @@ extension ChatViewController: UITableViewDataSource {
         else {
             cell.leftAvatarImage.isHidden = false
             cell.rightAvatarImage.isHidden = true
+            cell.senderLabel.textAlignment = .left
+            cell.messageLabel.textAlignment = .left
             cell.messageBubble.backgroundColor = UIColor(named: K.Colors.orange)
             cell.messageLabel.textColor = UIColor(named: K.Colors.navy)
         }
