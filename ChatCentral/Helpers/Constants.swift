@@ -6,14 +6,14 @@
 //
 
 struct K {
-    static let appName: String = "💬 Chat Central"
+    static let appName: String = "Chat Central"
     
     struct Segues {
         static let register: String = "RegisterToChat"
-        static let login: String = "LoginToChat"
+        static let welcome: String = "WelcomeToChat"
     }
     
-    struct ChatTable {
+    struct ChatCell {
         static let cellIdentifier: String = "ReusableCell"
         static let cellNibName: String = "MessageCell"
     }
@@ -26,7 +26,7 @@ struct K {
     }
     
     struct FStore {
-        static let collectionName: String = "messages"
+        static let messagesCollection: String = "messages"
         static let senderField: String = "sender"
         static let bodyField: String = "body"
         static let dateField: String = "date"

@@ -10,12 +10,9 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var appNameLabel: CLTypingLabel!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
-    }
-    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +20,34 @@ class WelcomeViewController: UIViewController {
         appNameLabel.text = K.appName
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        loginUser()
+    }
+    
+    private func loginUser() {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty {
+            Firebase.auth.signIn(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+                } else {
+                    self.performSegue(withIdentifier: K.Segues.welcome, sender: self)
+                }
+            }
+        } else {
+            Utils.showAlert(self, title: "Complete fields!", message: "Must complete all fields to continue.")
+        }
     }
 }

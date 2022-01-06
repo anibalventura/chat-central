@@ -6,14 +6,11 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseFirestore
 
 class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
-    private let db = Firestore.firestore()
     private var messages: [Message] = []
     
     override func viewDidLoad() {
@@ -23,7 +20,7 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         tableView.dataSource = self
-        tableView.register(UINib(nibName: K.ChatTable.cellNibName, bundle: nil), forCellReuseIdentifier: K.ChatTable.cellIdentifier)
+        tableView.register(UINib(nibName: K.ChatCell.cellNibName, bundle: nil), forCellReuseIdentifier: K.ChatCell.cellIdentifier)
         
         loadMessages()
     }
@@ -38,7 +35,7 @@ class ChatViewController: UIViewController {
     
     private func logOutUser() {
         do {
-            try Auth.auth().signOut()
+            try Firebase.auth.signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let e as NSError {
             Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
@@ -46,11 +43,11 @@ class ChatViewController: UIViewController {
     }
     
     private func sendMessage() {
-        let messageSender = Auth.auth().currentUser?.email ?? ""
+        let messageSender = Firebase.auth.currentUser?.email ?? ""
         let messageBody = messageTextField.text ?? ""
         
         if !messageSender.isEmpty && !messageBody.isEmpty {
-            db.collection(K.FStore.collectionName).addDocument(data: [
+            Firebase.fstore.collection(K.FStore.messagesCollection).addDocument(data: [
                 K.FStore.senderField: messageSender,
                 K.FStore.bodyField: messageBody,
                 K.FStore.dateField: Date().timeIntervalSince1970
@@ -67,7 +64,7 @@ class ChatViewController: UIViewController {
     }
     
     private func loadMessages() {
-        db.collection(K.FStore.collectionName).order(by: K.FStore.dateField).addSnapshotListener { querySnapshot, error in
+        Firebase.fstore.collection(K.FStore.messagesCollection).order(by: K.FStore.dateField).addSnapshotListener { querySnapshot, error in
             
             // Empty messages to add new messages on listener.
             self.messages = []
@@ -106,11 +103,11 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let message = self.messages[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.ChatTable.cellIdentifier, for: indexPath) as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.ChatCell.cellIdentifier, for: indexPath) as! MessageCell
         cell.messageLabel.text = message.body
         
         // Message from the current user.
-        if message.sender == Auth.auth().currentUser?.email {
+        if message.sender == Firebase.auth.currentUser?.email {
             cell.leftAvatarImage.isHidden = true
             cell.rightAvatarImage.isHidden = false
             cell.messageBubble.backgroundColor = UIColor(named: K.Colors.navy)
