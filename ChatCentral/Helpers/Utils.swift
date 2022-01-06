@@ -10,7 +10,7 @@ import UIKit
 struct Utils {
     static func showAlert<T: UIViewController> (_ view: T, title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        alert.addAction(UIAlertAction(title: Localizable.Alert.confirm, style: .default))
         view.present(alert, animated: true, completion: nil)
     }
 }

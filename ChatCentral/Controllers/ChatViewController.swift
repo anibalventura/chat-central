@@ -38,7 +38,7 @@ class ChatViewController: UIViewController {
             try Firebase.auth.signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let e as NSError {
-            Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+            Utils.showAlert(self, title: Localizable.Error.title, message: e.localizedDescription)
         }
     }
     
@@ -54,7 +54,7 @@ class ChatViewController: UIViewController {
                 K.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
-                    Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+                    Utils.showAlert(self, title: Localizable.Error.title, message: e.localizedDescription)
                 } else {
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
@@ -71,7 +71,7 @@ class ChatViewController: UIViewController {
             self.messages = []
             
             if let e = error {
-                Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+                Utils.showAlert(self, title: Localizable.Error.title, message: e.localizedDescription)
             } else {
                 for document in querySnapshot!.documents {
                     let data = document.data()

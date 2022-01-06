@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20E7DB84616887AA19960154 /* Pods_ChatCentral.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF491C6A56F8407E2F584779 /* Pods_ChatCentral.framework */; };
+		C51C82B327876C3900C6EC59 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C51C82B527876C3900C6EC59 /* Localizable.strings */; };
+		C51C82B827876C6800C6EC59 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51C82B727876C6800C6EC59 /* Localizable.swift */; };
 		C5D866942784F44900793041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D866932784F44900793041 /* AppDelegate.swift */; };
 		C5D866962784F44900793041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D866952784F44900793041 /* SceneDelegate.swift */; };
 		C5D8669B2784F44900793041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D866992784F44900793041 /* Main.storyboard */; };
@@ -29,6 +31,10 @@
 		0E91E9859F19FB222358F2F7 /* Pods-ChatCentral.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatCentral.release.xcconfig"; path = "Target Support Files/Pods-ChatCentral/Pods-ChatCentral.release.xcconfig"; sourceTree = "<group>"; };
 		B36567E928E17A633841D6FD /* Pods-ChatCentral.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatCentral.debug.xcconfig"; path = "Target Support Files/Pods-ChatCentral/Pods-ChatCentral.debug.xcconfig"; sourceTree = "<group>"; };
 		BF491C6A56F8407E2F584779 /* Pods_ChatCentral.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatCentral.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C51C82B0278769F200C6EC59 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		C51C82B427876C3900C6EC59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C51C82B727876C6800C6EC59 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		C51C82B92787721A00C6EC59 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C5D866902784F44900793041 /* ChatCentral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatCentral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D866932784F44900793041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5D866952784F44900793041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			children = (
 				C5D866932784F44900793041 /* AppDelegate.swift */,
 				C5D866952784F44900793041 /* SceneDelegate.swift */,
+				C51C82B527876C3900C6EC59 /* Localizable.strings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			children = (
 				C5D866B62785E90300793041 /* Utils.swift */,
 				C5D866B82785F45D00793041 /* Constants.swift */,
+				C51C82B727876C6800C6EC59 /* Localizable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,6 +218,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = C5D866872784F44900793041;
 			productRefGroup = C5D866912784F44900793041 /* Products */;
@@ -227,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D866C1278609C800793041 /* MessageCell.xib in Resources */,
+				C51C82B327876C3900C6EC59 /* Localizable.strings in Resources */,
 				C5D866A02784F44B00793041 /* LaunchScreen.storyboard in Resources */,
 				C5D866B42785DCD000793041 /* GoogleService-Info.plist in Resources */,
 				C5D8669D2784F44B00793041 /* Assets.xcassets in Resources */,
@@ -283,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51C82B827876C6800C6EC59 /* Localizable.swift in Sources */,
 				C5D866AC2784F57F00793041 /* WelcomeViewController.swift in Sources */,
 				C5D866BE2785FE0C00793041 /* MessageCell.swift in Sources */,
 				C5D866B72785E90300793041 /* Utils.swift in Sources */,
@@ -299,10 +310,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C51C82B527876C3900C6EC59 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C51C82B427876C3900C6EC59 /* en */,
+				C51C82B92787721A00C6EC59 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C5D866992784F44900793041 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C5D8669A2784F44900793041 /* Base */,
+				C51C82B0278769F200C6EC59 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -383,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

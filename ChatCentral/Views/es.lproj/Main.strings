@@ -1,0 +1,29 @@
+/* Button to register a user. */
+"8rk-xw-2dr.configuration.title" = "Registrarse";
+
+/* TextField place holder before writte a message. */
+"DCW-yL-d6o.placeholder" = "Escribe un mensaje...";
+
+/* TextField placeholder to enter a email. */
+"Dhb-fK-gqQ.placeholder" = "Correo";
+
+/* Button screen to log in a user. */
+"IPE-lJ-3sY.configuration.title" = "Iniciar Sesión";
+
+/* Textfield placeholder to enter a password. */
+"Nri-mS-nIz.placeholder" = "Contraseña";
+
+/* Navigation item button to log out a user. */
+"h5O-dh-Pvv.title" = "Salir";
+
+/* Textfield placeholder to enter a password. */
+"jVL-Kt-MPS.placeholder" = "Contraseña";
+
+/* Textfield placeholder to re-enter password. */
+"mXa-H4-2gR.placeholder" = "Confirmar contraseña";
+
+/* Button to register a user. */
+"sqw-8n-35B.configuration.title" = "Registrarse";
+
+/* TextField placeholder to enter a email. */
+"zBg-8h-qoh.placeholder" = "Correo";

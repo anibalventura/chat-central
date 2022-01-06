@@ -25,16 +25,16 @@ class RegisterViewController: UIViewController {
             if password == confirmPassword {
                 Firebase.auth.createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
-                        Utils.showAlert(self, title: "There was an error!", message: e.localizedDescription)
+                        Utils.showAlert(self, title: Localizable.Error.title, message: e.localizedDescription)
                     } else {
                         self.performSegue(withIdentifier: K.Segues.register, sender: self)
                     }
                 }
             } else {
-                Utils.showAlert(self, title: "Different passwords!", message: "Passwords have to be the same.")
+                Utils.showAlert(self, title: Localizable.Register.passwordAlertTitle, message: Localizable.Register.passwordAlertMsg)
             }
         } else {
-            Utils.showAlert(self, title: "Complete fields!", message: "Must complete all fields to continue.")
+            Utils.showAlert(self, title: Localizable.Welcome.loginAlertTitle, message: Localizable.Welcome.loginAlertMsg)
         }
     }
 }

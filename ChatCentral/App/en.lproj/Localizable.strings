@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  ChatCentral
+
+  Created by Anibal Ventura on 6/1/22.
+  
+*/
+
+/* Alert */
+
+// Confirm alert.
+"alert-confirm" = "Ok";
+
+/* Error */
+
+// Title of generic error.
+"error-title" = "There was an error!";
+
+/* Welcome Screen */
+
+// Alert title when login fields are incomplete.
+"login-alert-title" = "Complete fields!";
+// Alert message when login fields are incomplete.
+"login-alert-message" = "Must complete all fields to continue.";
+
+/* Register Screen */
+
+// Alert title when passwords are not the same.
+"password-alert-title" = "Different passwords!";
+// Alert message when passwords are not the same.
+"password-alert-message" = "Passwords have to be the same.";
