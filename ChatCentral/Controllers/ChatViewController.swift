@@ -16,7 +16,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = K.appName
+        title = "💬 \(K.appName)"
         navigationItem.hidesBackButton = true
         
         tableView.dataSource = self
@@ -42,6 +42,7 @@ class ChatViewController: UIViewController {
         }
     }
     
+    // MARK: - Load/Send Message
     private func sendMessage() {
         let messageSender = Firebase.auth.currentUser?.email ?? ""
         let messageBody = messageTextField.text ?? ""
