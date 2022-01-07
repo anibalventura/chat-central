@@ -12,6 +12,9 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var appNameLabel: CLTypingLabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        loginUser()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +31,6 @@ class WelcomeViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
-    }
-
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        loginUser()
     }
 
     private func loginUser() {

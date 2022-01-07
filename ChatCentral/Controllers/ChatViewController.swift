@@ -10,6 +10,12 @@ import UIKit
 class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
+        logOutUser()
+    }
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        sendMessage()
+    }
 
     private var messages: [Message] = []
 
@@ -26,14 +32,6 @@ class ChatViewController: UIViewController {
         )
 
         loadMessages()
-    }
-
-    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
-        logOutUser()
-    }
-
-    @IBAction func sendButtonPressed(_ sender: UIButton) {
-        sendMessage()
     }
 
     private func logOutUser() {
@@ -73,7 +71,7 @@ class ChatViewController: UIViewController {
             .order(by: Consts.FStore.dateField)
             .addSnapshotListener { querySnapshot, error in
 
-            // Empty messages to add new messages on listener.
+            // Empty messages to add incoming messages from snapshot.
             self.messages = []
 
             if let error = error {
@@ -131,8 +129,8 @@ extension ChatViewController: UITableViewDataSource {
             cell.rightAvatarImage.isHidden = true
             cell.senderLabel.textAlignment = .left
             cell.messageLabel.textAlignment = .left
-            cell.messageBubble.backgroundColor = UIColor(named: Consts.Colors.orange)
-            cell.messageLabel.textColor = UIColor(named: Consts.Colors.navy)
+            cell.messageBubble.backgroundColor = UIColor(named: Consts.Colors.blue)
+            cell.messageLabel.textColor = UIColor(named: Consts.Colors.orange)
         }
 
         return cell

@@ -40,6 +40,11 @@
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -64,6 +69,11 @@
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -166,6 +176,11 @@
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -193,6 +208,11 @@
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -217,6 +237,11 @@
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -296,12 +321,18 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-yL-d6o">
                                         <rect key="frame" x="20" y="20" width="314" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="LHk-Dp-ut5"/>
                                         </constraints>
                                         <color key="textColor" name="Navy"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqa-BZ-UwK">
                                         <rect key="frame" x="354" y="20" width="40" height="40"/>
@@ -311,14 +342,14 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="kFl-zt-KPp"/>
                                             <constraint firstAttribute="height" constant="40" id="mbZ-0y-m0U"/>
                                         </constraints>
-                                        <color key="tintColor" name="Navy"/>
+                                        <color key="tintColor" name="Orange"/>
                                         <state key="normal" image="paperplane.fill" catalog="system"/>
                                         <connections>
                                             <action selector="sendButtonPressed:" destination="upi-qu-95v" eventType="touchUpInside" id="9eG-WX-mBc"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" name="Orange"/>
+                                <color key="backgroundColor" name="Blue"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="DCW-yL-d6o" secondAttribute="bottom" constant="40" id="BZd-D1-jlV"/>
                                     <constraint firstAttribute="trailing" secondItem="kqa-BZ-UwK" secondAttribute="trailing" constant="20" id="N85-fK-H3H"/>
@@ -365,28 +396,28 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="m0o-5Z-J26">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="Orange"/>
-                        <color key="tintColor" name="Blue"/>
-                        <color key="barTintColor" name="Orange"/>
+                        <color key="backgroundColor" name="Blue"/>
+                        <color key="tintColor" name="Orange"/>
+                        <color key="barTintColor" name="Blue"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
-                            <color key="textColor" name="Blue"/>
+                            <color key="textColor" name="Orange"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="Blue"/>
+                            <color key="textColor" name="Orange"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" name="Orange"/>
+                            <color key="backgroundColor" name="Blue"/>
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
-                                <color key="textColor" name="Blue"/>
+                                <color key="textColor" name="Orange"/>
                             </textAttributes>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" name="Orange"/>
+                            <color key="backgroundColor" name="Blue"/>
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
-                                <color key="textColor" name="Blue"/>
+                                <color key="textColor" name="Orange"/>
                             </textAttributes>
                         </navigationBarAppearance>
                     </navigationBar>
@@ -406,7 +437,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="3cK-1u-gnx"/>
+        <segue reference="qgf-Dj-MTm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Launch Icon" width="341" height="341"/>
