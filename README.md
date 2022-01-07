@@ -7,7 +7,7 @@
 
 <p> <img src="repository_banner.png" align="center"/> </p>
 
-Group messaging app. Build with UIKit, MVC and [Firebase](https://firebase.google.com) as backend.
+Chat room messaging app. Build with UIKit, MVC and [Firebase](https://firebase.google.com) as backend.
 
 ## Features
 
