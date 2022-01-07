@@ -49,7 +49,7 @@ internal extension IQKeyboardManager {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******", indentation: 1)
 
-        //If textViewContentInsetChanged is saved then restore it.
+        // If textViewContentInsetChanged is saved then restore it.
         if let textView = textFieldView as? UITextView, textView.responds(to: #selector(getter: UITextView.isEditable)) {
 
             if isTextViewContentInsetChanged {
@@ -59,7 +59,7 @@ internal extension IQKeyboardManager {
 
                         self.showLog("Restoring textView.contentInset to: \(self.startingTextViewContentInsets)")
 
-                        //Setting textField to it's initial contentInset
+                        // Setting textField to it's initial contentInset
                         textView.contentInset = self.startingTextViewContentInsets
                         textView.scrollIndicatorInsets = self.startingTextViewScrollIndicatorInsets
 

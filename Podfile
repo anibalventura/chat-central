@@ -5,6 +5,7 @@ target 'ChatCentral' do
   use_frameworks!
 
   # Pods for ChatCentral
+  pod 'SwiftLint'
   pod 'CLTypingLabel'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'

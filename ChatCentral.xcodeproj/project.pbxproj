@@ -186,6 +186,7 @@
 				C5D8668D2784F44900793041 /* Frameworks */,
 				C5D8668E2784F44900793041 /* Resources */,
 				67D52AB1B0D3DFA28CE6582E /* [CP] Embed Pods Frameworks */,
+				C51C82BA2787BD2700C6EC59 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,6 +286,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatCentral/Pods-ChatCentral-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C51C82BA2787BD2700C6EC59 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

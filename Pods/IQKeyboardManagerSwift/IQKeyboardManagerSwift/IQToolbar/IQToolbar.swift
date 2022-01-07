@@ -43,7 +43,7 @@ open class IQToolbar: UIToolbar, UIInputViewAudioFeedback {
             appearanceProxy.setShadowImage(nil, forToolbarPosition: .any)
         }
 
-        //Background color
+        // Background color
         appearanceProxy.backgroundColor = nil
     }
 
@@ -204,7 +204,7 @@ open class IQToolbar: UIToolbar, UIInputViewAudioFeedback {
                     break
                 } else if barButtonItemView === customTitleView {
                     isTitleBarButtonFound = true
-                    //If it's UIToolbarButton or UIToolbarTextButton (which actually UIBarButtonItem)
+                    // If it's UIToolbarButton or UIToolbarTextButton (which actually UIBarButtonItem)
                 } else if barButtonItemView.isKind(of: UIControl.self) {
                     leftRect = barButtonItemView.frame
                 }

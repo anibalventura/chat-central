@@ -94,7 +94,7 @@ internal extension IQKeyboardManager {
         textFieldView = notification.object as? UIView
 
         if overrideKeyboardAppearance, let textInput = textFieldView as? UITextInput, textInput.keyboardAppearance != keyboardAppearance {
-            //Setting textField keyboard appearance and reloading inputViews.
+            // Setting textField keyboard appearance and reloading inputViews.
             if let textFieldView = textFieldView as? UITextField {
                 textFieldView.keyboardAppearance = keyboardAppearance
             } else if  let textFieldView = textFieldView as? UITextView {
@@ -103,10 +103,10 @@ internal extension IQKeyboardManager {
             textFieldView?.reloadInputViews()
         }
 
-        //If autoToolbar enable, then add toolbar on all the UITextField/UITextView's if required.
+        // If autoToolbar enable, then add toolbar on all the UITextField/UITextView's if required.
         if privateIsEnableAutoToolbar() {
 
-            //UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
+            // UITextView special case. Keyboard Notification is firing before textView notification so we need to resign it first and then again set it as first responder to add toolbar on it.
             if let textView = textFieldView as? UIScrollView, textView.responds(to: #selector(getter: UITextView.isEditable)),
                 textView.inputAccessoryView == nil {
 
@@ -116,11 +116,11 @@ internal extension IQKeyboardManager {
 
                 }, completion: { (_) -> Void in
 
-                    //On textView toolbar didn't appear on first time, so forcing textView to reload it's inputViews.
+                    // On textView toolbar didn't appear on first time, so forcing textView to reload it's inputViews.
                     textView.reloadInputViews()
                 })
             } else {
-                //Adding toolbar
+                // Adding toolbar
                 addToolbarIfRequired()
             }
         } else {
@@ -153,8 +153,8 @@ internal extension IQKeyboardManager {
                 }
             }
 
-            //If textFieldView is inside ignored responder then do nothing. (Bug ID: #37, #74, #76)
-            //See notes:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70).
+            // If textFieldView is inside ignored responder then do nothing. (Bug ID: #37, #74, #76)
+            // See notes:- https://developer.apple.com/library/ios/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html If it is UIAlertView textField then do not affect anything (Bug ID: #70).
             if keyboardShowing,
                 let textFieldView = textFieldView,
                 textFieldView.isAlertViewTextField() == false {
@@ -174,7 +174,7 @@ internal extension IQKeyboardManager {
         let startTime = CACurrentMediaTime()
         showLog("****** \(#function) started ******", indentation: 1)
 
-        //Removing gesture recognizer   (Enhancement ID: #14)
+        // Removing gesture recognizer   (Enhancement ID: #14)
         textFieldView?.window?.removeGestureRecognizer(resignFirstResponderGesture)
 
         // We check if there's a change in original frame or not.
@@ -189,7 +189,7 @@ internal extension IQKeyboardManager {
 
                     UIView.animate(withDuration: animationDuration, delay: 0, options: animationCurve, animations: { () -> Void in
 
-                        //Setting textField to it's initial contentInset
+                        // Setting textField to it's initial contentInset
                         textView.contentInset = self.startingTextViewContentInsets
                         textView.scrollIndicatorInsets = self.startingTextViewScrollIndicatorInsets
 
@@ -198,7 +198,7 @@ internal extension IQKeyboardManager {
             }
         }
 
-        //Setting object to nil
+        // Setting object to nil
         textFieldView = nil
 
         let elapsedTime = CACurrentMediaTime() - startTime

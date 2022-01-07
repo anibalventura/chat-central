@@ -9,22 +9,22 @@ import Foundation
 
 struct Localizable {
     struct Alert {
-        static let confirm: String = NSLocalizedString("alert-confirm", comment: "Confirm alert.")
+        static let confirm: String = NSLocalizedString("alert-confirm", comment: "")
     }
-    
+
     struct Error {
-        static let title: String = NSLocalizedString("error-title", comment: "Title of generic error.")
+        static let title: String = NSLocalizedString("error-title", comment: "")
     }
-    
+
     /* Screens */
-    
+
     struct Welcome {
-        static let loginAlertTitle: String = NSLocalizedString("login-alert-title", comment: "Alert title when login fields are incomplete.")
-        static let loginAlertMsg: String = NSLocalizedString("login-alert-message", comment: "Must complete all fields to continue.")
+        static let loginAlertTitle: String = NSLocalizedString("login-alert-title", comment: "")
+        static let loginAlertMsg: String = NSLocalizedString("login-alert-message", comment: "")
     }
-    
+
     struct Register {
-        static let passwordAlertTitle: String = NSLocalizedString("password-alert-title", comment: "Alert title when passwords are not the same.")
-        static let passwordAlertMsg: String = NSLocalizedString("password-alert-message", comment: "Alert message when passwords are not the same.")
+        static let passwordAlertTitle: String = NSLocalizedString("password-alert-title", comment: "")
+        static let passwordAlertMsg: String = NSLocalizedString("password-alert-message", comment: "")
     }
 }
