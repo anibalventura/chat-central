@@ -5,12 +5,18 @@
 //  Created by Anibal Ventura on 5/1/22.
 //
 
+import UIKit
+
 struct Consts {
     static let appName: String = "Chat Central"
 
-    struct Segues {
-        static let register: String = "RegisterToChat"
-        static let welcome: String = "WelcomeToChat"
+    struct NavController {
+        static let login: String = "LoginNavigationController"
+        static let main: String = "MainNavigationController"
+    }
+
+    struct Prefs {
+        static let lastEmailLogin: String = "LastEmailLoginKey"
     }
 
     struct ChatCell {

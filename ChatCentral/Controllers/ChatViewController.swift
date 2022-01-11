@@ -10,12 +10,6 @@ import UIKit
 class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
-    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
-        logOutUser()
-    }
-    @IBAction func sendButtonPressed(_ sender: UIButton) {
-        sendMessage()
-    }
 
     private var messages: [Message] = []
 
@@ -34,10 +28,20 @@ class ChatViewController: UIViewController {
         loadMessages()
     }
 
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
+        logOutUser()
+    }
+
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        sendMessage()
+    }
+
     private func logOutUser() {
         do {
             try Firebase.auth.signOut()
-            navigationController?.popToRootViewController(animated: true)
+
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                .changeRootViewController(Utils.initiateViewController(Consts.NavController.login))
         } catch let error as NSError {
             Utils.showAlert(self, title: Localizable.Error.title, message: error.localizedDescription)
         }
@@ -55,7 +59,10 @@ class ChatViewController: UIViewController {
                 Consts.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let error = error {
-                    Utils.showAlert(self, title: Localizable.Error.title, message: error.localizedDescription)
+                    Utils.showAlert(
+                        self, title: Localizable.Error.title,
+                        message: error.localizedDescription
+                    )
                 } else {
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""

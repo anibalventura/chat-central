@@ -18,7 +18,7 @@ struct Localizable {
 
     /* Screens */
 
-    struct Welcome {
+    struct Login {
         static let loginAlertTitle: String = NSLocalizedString("login-alert-title", comment: "")
         static let loginAlertMsg: String = NSLocalizedString("login-alert-message", comment: "")
     }

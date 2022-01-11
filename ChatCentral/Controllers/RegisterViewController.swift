@@ -11,6 +11,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         createUser()
     }
@@ -26,21 +27,24 @@ class RegisterViewController: UIViewController {
                     if let error = error {
                         Utils.showAlert(self, title: Localizable.Error.title, message: error.localizedDescription)
                     } else {
-                        self.performSegue(withIdentifier: Consts.Segues.register, sender: self)
+                        // Save last email login.
+                        Prefs.set(value: self.emailTextField.text, key: Consts.Prefs.lastEmailLogin)
+
+                        // Navigate to Main View Controller.
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?
+                            .changeRootViewController(Utils.initiateViewController(Consts.NavController.main))
                     }
                 }
             } else {
                 Utils.showAlert(
-                    self,
-                    title: Localizable.Register.passwordAlertTitle,
+                    self, title: Localizable.Register.passwordAlertTitle,
                     message: Localizable.Register.passwordAlertMsg
                 )
             }
         } else {
             Utils.showAlert(
-                self,
-                title: Localizable.Welcome.loginAlertTitle,
-                message: Localizable.Welcome.loginAlertMsg
+                self, title: Localizable.Login.loginAlertTitle,
+                message: Localizable.Login.loginAlertMsg
             )
         }
     }

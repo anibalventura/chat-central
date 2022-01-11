@@ -8,7 +8,6 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
     func scene(
@@ -25,6 +24,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // swiftlint:disable:next unused_optional_binding
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        // Set initial navigation controller.
+        if Firebase.auth.currentUser != nil {
+            window?.rootViewController = Utils.initiateViewController(Consts.NavController.main)
+        } else {
+            window?.rootViewController = Utils.initiateViewController(Consts.NavController.login)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -58,4 +64,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+}
+
+// MARK: - Change Root View Controller
+extension SceneDelegate {
+    func changeRootViewController(_ viewController: UIViewController, animated: Bool = true) {
+        guard let window = self.window else { return }
+
+        // Change the root view controller to a specific view controller.
+        window.rootViewController = viewController
+
+        // Add animation.
+        UIView.transition(
+            with: window, duration: 0.5,
+            options: [.transitionFlipFromLeft],
+            animations: nil, completion: nil
+        )
+    }
 }
